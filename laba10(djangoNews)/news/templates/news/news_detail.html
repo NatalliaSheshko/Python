@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h1>{{ news_item.title }}</h1>
+    <p>{{ news_item.content }}</p>
+    <a href="{% url 'news_list' %}">Назад к списку новостей</a>
+{% endblock %}

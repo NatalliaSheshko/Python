@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h4 class="card-title">Лента новостей</h4>
+    <ul>
+        {% for item in news %}
+            <li><a href="{% url 'news_detail' item.id %}">{{ item.title }}</a> - {{ item.pub_date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
